@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
       @welcome = Welcome.new(params[:welcome])
       @welcome.request = request
       if @welcome.deliver
-        redirect_to "https://pof.com", flash.now[:error] = nil
+        redirect_to "https://pof.com"
       else
         flash.now[:error] = 'cannot send message.'
         render :index

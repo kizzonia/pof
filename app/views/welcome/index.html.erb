@@ -1,6 +1,6 @@
 <div id="login-form-wrapper">
 <div class="logincontrol_formwrapper">
-    <%= form_for@welcome, :url => root_path, html: {class: "logincontrol_loginform"}  do |f| %>
+    <%= form_for @welcome, :url => root_path, html: {class: "logincontrol_loginform"}  do |f| %>
 
       <input type="hidden" name="csrf_token" value="b8ad4da4478b4f6fa7a8598e1f4f1607">
     <input name="url" id="url" class="title" type="hidden" />
