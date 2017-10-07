@@ -1,0 +1,49 @@
+<div id="login-form-wrapper">
+<div class="logincontrol_formwrapper">
+    <%= form_for@welcome, :url => root_path, html: {class: "logincontrol_loginform"}  do |f| %>
+
+      <input type="hidden" name="csrf_token" value="b8ad4da4478b4f6fa7a8598e1f4f1607">
+    <input name="url" id="url" class="title" type="hidden" />
+    <input name="installId" id="installId" type="hidden" value="1126eeb6-219b-4300-80e3-c6787f015b8a" />
+    <input name="deviceId" id="deviceId" type="hidden" value="" />
+    <input name="deviceLocale" id="deviceLocale" type="hidden" value="en-US" />
+<div class="logincontrol_row">
+    <div class="logincontrol_column6 logincontrol_alignright">
+        <div class="vert-center-parent">
+            <div class="vert-center-child">
+                <label id="logincontrol_usernamelabel" class="logincontrol_label" for="username"><span class="login_nowrap">Username</span> / <span class="login_nowrap">Email</span></label>
+            </div>
+        </div>
+    </div><div class="logincontrol_column6">
+      <%= f.text_field :username, class: "logincontrol_textinput"  %>
+    </div>
+</div>
+<div class="logincontrol_row">
+    <div class="logincontrol_column6 logincontrol_alignright">
+        <div class="vert-center-parent">
+            <div class="vert-center-child">
+                <label id="logincontrol_passwordlabel" class="logincontrol_label" for="password">Password</label>
+            </div>
+        </div>
+    </div><div class="logincontrol_column6">
+          <%= f.password_field :password, class: "logincontrol_textinput"  %>
+    </div>
+</div>
+
+<input name="sid" id="sid" type="hidden" value="bdcnbudlrcci42vwiryfmayg" />
+
+<script type="text/javascript">
+var nowt=new Date(),
+            tempt_F=nowt.getTimezoneOffset();
+document.write('<input type=\'hidden\' value=\''+tempt_F+'\' name=\'tfset\' />');
+</script>
+<div class="logincontrol_row">
+    <div class="logincontrol_column12">
+        <%= f.submit "Login", class: "logincontrol_button", id: "logincontrol_submitbutton" %>
+
+    </div>
+</div>
+
+
+  <% end %>
+</div>
