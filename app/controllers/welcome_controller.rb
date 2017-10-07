@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def new
     @welcome = Welcome.new
   end
 
@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
         redirect_to "https://pof.com"
       else
         flash.now[:error] = 'cannot send message.'
-        render :index
+        render :new
       end
     end
 end
