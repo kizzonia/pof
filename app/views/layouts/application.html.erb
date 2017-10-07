@@ -258,31 +258,6 @@
 
     <%= yield %>
 
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            if(document.getElementsByClassName("logincontrol_formwrapper") !== null)
-            {
-                jQuery.ajax({
-                    url: "/lytics/LoginFormPresented",
-                    method: "POST",
-                    data: {
-                        api: 1,
-                        __RequestVerificationToken: window.pof.__RequestVerificationToken
-                    }
-                });
-            }
-            jQuery('#logincontrol_submitbutton').click(function () {
-                jQuery.ajax({
-                    url: "/lytics/LoginSubmitButtonClicked",
-                    method: "POST",
-                    data: {
-                        api: 1,
-                        __RequestVerificationToken: window.pof.__RequestVerificationToken
-                    }
-                });
-            });
-        });
-    </script>
 
     		</div><!--// end login form -->
     		<div id="clear"></div>
