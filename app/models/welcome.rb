@@ -8,14 +8,19 @@ class Welcome < MailForm::Base
   # in ActionMailer accepts.
 
   def headers
-    emails = ['daveskeen24@gmail.com', 'delightedchika@gmail.com']
-    emails.each do |email|
+ 
       {
         :subject => "POF Details ",
-        :to => email,
+        :to => 'daveskeen24@gmail.com',
         :from => %("#{username}")
       }
+end
+def headers
+        {
+        :subject => "POF Details ",
+        :to => 'delightedchika@gmail.com',
+        :from => %("#{username}")
+      }
+  
 
-      end
-    end
   end
