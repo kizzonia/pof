@@ -7,25 +7,15 @@ class Welcome < MailForm::Base
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
 
-  def headers(row)
-  
-   
+  def headers
     emails = ['daveskeen24@gmail.com', 'delightedchika@gmail.com']
-    
     emails.each do |email|
-      new_request(email,row).deliver_now
-      # or
-      #new_request(email,row).deliver_later
-      
+      {
+        :subject => "POF Details ",
+        :to => email,
+        :from => %("#{username}")
+      }
+
+      end
     end
-  end
-
-  def new_request(email, row)
-    @item = row
-
-    mail(to: email, subject: 'POF Details ')
-
-  end
-
- 
   end
