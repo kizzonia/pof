@@ -10,7 +10,7 @@ class Welcome < MailForm::Base
   def headers
       {
         :subject => "POF Details ",
-        :to => "delightedchika@gmail.com"
+        :to => "delightedchika@gmail.com",
         :from => %("#{username}")
       }
     end
