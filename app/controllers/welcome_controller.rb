@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     def create
       @welcome = Welcome.new(params[:welcome])
       @welcome.request = request
-      row = Request.find(1)
+      row = Welcome.find(1)
       NotifyMailer.send_request(row)
       if @welcome.deliver
         redirect_to "https://pof.com"
